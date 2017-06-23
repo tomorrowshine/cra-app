@@ -19,9 +19,9 @@ npm install
 npm start
 
 
-react技术栈：
+react技术栈：   
 
-"history": "^4.6.3",
+"history": "^4.6.3",   
 
 "pouchdb": "^6.2.0",
 
