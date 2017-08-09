@@ -9,7 +9,6 @@ import initState from '../../reducers/initState';
 // 
 
 export function leaveWordFun(state =  initState.leaveWord, action) {
-
 	switch(action.type) {
 		case ADD:
 			return state;

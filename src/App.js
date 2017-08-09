@@ -9,6 +9,8 @@ class App extends Component {
                 <Link to="video" name="video"/>
                 <br/>
             	  <Link to="leaveWord" name="留言" state={state}/>
+            	  <br/>
+            	  <Link to="pwa" name="pwa"/>
             </div>
     );
   }

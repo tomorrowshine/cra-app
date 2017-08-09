@@ -18,6 +18,7 @@ ReactDOM.render(
 	         <Route exact path='/' component={App}/>
 	         <Route exact path='/video' component={video}/>
 	         <Route path='/leaveWord' component={leaveWord}/>
+	         
 	      </Switch>
 	    </Router>
 	      

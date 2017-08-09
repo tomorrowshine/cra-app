@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 class App extends PureComponent {
 	handleClick=() => {
-		this.props.dispatch(push(this.props.to,this.props.state));
+		this.props.dispatch(push({pathname:this.props.to, state: this.props.state}));
 	}
   render() {
     return (
