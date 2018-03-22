@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import video  from './containers/video';
 import leaveWord  from './containers/leaveWord';
+import list  from './containers/list/list';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux'
 import store from './store';
@@ -18,6 +19,8 @@ ReactDOM.render(
 	         <Route exact path='/' component={App}/>
 	         <Route exact path='/video' component={video}/>
 	         <Route path='/leaveWord' component={leaveWord}/>
+	         <Route path='/list' component={list}/>
+	         
 	         
 	      </Switch>
 	    </Router>

@@ -1,20 +1,20 @@
-import React, {
-	Component
-} from 'react';
+import React from  'react';
 import { addWord,listWord,delWord } from './action'
 import { connect } from 'react-redux'
 import PouchDB from 'pouchdb';
 import Header from '../../component/Header';
+import Link from '../../component/Link'
 import config from '../../assets/config';
 var db = new PouchDB('cradb');
 
-class App extends Component {
+class App extends React.Component {
 
-	  componentDidMount() {
-			db.replicate.to(config.couchdb);
-			this.props.dispatch(listWord());
-	  }
-	  delDispatch=(_this) => {
+	componentDidMount() {
+		db.replicate.to(config.couchdb);
+		this.props.dispatch(listWord());
+	}
+	delDispatch = (_this) => {
+		
 		this.props.dispatch(delWord(_this.currentTarget.getAttribute("data-id"),_this.currentTarget.getAttribute("data-rev")));
 		this.props.dispatch(listWord());
 	}
@@ -49,7 +49,7 @@ class App extends Component {
 	      
 	      {
 	      		this.props.state.leaveWord.rows.map((item, index) => {
-					return <div key={item.id} value={item.id}><h3 >{item.doc.name}:{item.doc.text} {item.doc.createTime}  <a onClick={this.delDispatch} data-id={item.doc._id}  data-rev={item.doc._rev} href="javascript:void(0);">删除</a></h3></div>
+					return <div key={item.id} value={item.id}><h3 >{item.doc.name}:{item.doc.text} {item.doc.createTime}  <Link name="删除" onClick={this.delDispatch} data-id={item.doc._id}  data-rev={item.doc._rev} /></h3></div>
 				})
 	      
 	      }

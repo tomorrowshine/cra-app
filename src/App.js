@@ -11,6 +11,8 @@ class App extends Component {
             	  <Link to="leaveWord" name="留言" state={state}/>
             	  <br/>
             	  <Link to="pwa" name="pwa"/>
+            	  <br/>
+            	  <Link to="list" name="list"/>
             </div>
     );
   }

@@ -1,0 +1,29 @@
+.VirtualList{
+    overflow: auto;
+    position: relative;
+    width:100%;
+    .list-view-phantom {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+    .list-view-content {
+      left: 0;
+      right: 0;
+      top: 0;
+      position: absolute;
+      .list-view-item {
+          color: #666;
+          line-height: 30px;
+          box-sizing: border-box;
+        }
+    }
+    
+    
+}
+
+
+
+
