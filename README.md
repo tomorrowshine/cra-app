@@ -40,3 +40,5 @@ react技术栈：
 "redux-logger": "^3.0.6",
 
 "redux-thunk": "^2.2.0"
+
+"postcss-loader": "2.0.6"
