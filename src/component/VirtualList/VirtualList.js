@@ -20,8 +20,7 @@ class Component extends React.Component {
 		
 	}
 	
-	updateVisibleData(scrollTop) {
-		  scrollTop = scrollTop || 0;
+	updateVisibleData(scrollTop=0) {
 		  const visibleCount = Math.ceil(this.props.height / 30); // 取得可见区域的可见列表项数量
 		  const start = Math.floor(scrollTop / 30); // 取得可见区域的起始数据索引
 		  const end = start + visibleCount; // 取得可见区域的结束数据索引

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import video  from './containers/video';
 import leaveWord  from './containers/leaveWord';
 import list  from './containers/list/list';
 import registerServiceWorker from './registerServiceWorker';
@@ -17,7 +16,6 @@ ReactDOM.render(
     	<Router history={history}>
 	      <Switch>
 	         <Route exact path='/' component={App}/>
-	         <Route exact path='/video' component={video}/>
 	         <Route path='/leaveWord' component={leaveWord}/>
 	         <Route path='/list' component={list}/>
 	         

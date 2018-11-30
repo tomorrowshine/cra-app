@@ -2,6 +2,7 @@ import PouchDB from 'pouchdb';
 import DateUtil from '../../utils/DateUtil';
 import config from '../../assets/config';
 var db = new PouchDB('cradb');
+
 /*
  * action types
  */
@@ -30,6 +31,7 @@ export function addWord(payload) {
 	}
 }
 export function listWord() {
+    db.replicate.from(config.couchdb);
 	return function(dispatch) {
 		db.allDocs({
 			include_docs: true,
@@ -49,6 +51,7 @@ export function listWord() {
 }
 export function delWord(_id,_rev) {
 	db.remove(_id, _rev);
+	db.replicate.to(config.couchdb);
 	return {
 		type: DELETE
 	}

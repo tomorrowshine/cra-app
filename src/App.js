@@ -6,11 +6,7 @@ class App extends Component {
   	var state={some:"留言"};
     return (
      		 <div>
-                <Link to="video" name="video"/>
-                <br/>
             	  <Link to="leaveWord" name="留言" state={state}/>
-            	  <br/>
-            	  <Link to="pwa" name="pwa"/>
             	  <br/>
             	  <Link to="list" name="list"/>
             </div>
